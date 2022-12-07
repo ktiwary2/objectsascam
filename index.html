@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>ORCa</title>
+    <title><b>ORCa</b></title>
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,7 +36,7 @@
     <div class="container" id="main">
         <div class="row">
             <h1 class="col-md-12 text-center">
-                ORCa: Glossy Objects as Radiance-Field Cameras <br>
+                <b>ORCa</b>: Glossy <b>O</b>bjects as <b>R</b>adiance-Field <b>Ca</b>meras <br>
             </h1>
         </div>
         <div class="row">
@@ -44,13 +44,13 @@
                 <ul class="list-inline">
                     <li>
                         <a href="https://www.media.mit.edu/people/ktiwary/overview/">
-                          Kushagra Tiwary
+                          Kushagra Tiwary * 
                         </a>
                         </br>MIT
                     </li>
                     <li>
                         <a href="https://akshatdave.github.io/">
-                          Akshat Dave
+                          Akshat Dave * 
                         </a>
                         </br>Rice
                     </li>
@@ -127,6 +127,93 @@ Reflections on glossy objects contain valuable and hidden information about the 
                 </p>
             </div>
         </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Objects-as-Radiance-Field-Cameras Enables Beyond Field-of-View Novel View Synthesis
+                </h3>
+                <ul class="nav nav-pills nav-justified">
+                    <li>
+                        <a href="">
+                        <image src="rotating_sphere_.gif" height="240px"><br>
+                            <h4><strong>MultiView Images captured of a Sphere in Living Room</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                        <image src="exp51_lv_forward_sphere_2gpus_vcam_rgb_254x254_3_train_views.gif" height="240px"><br>
+                            <h4><strong>Rendering the Captured Environment Radiance Field at Novel View Points</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                        <image src="exp51_lv_forward_sphere_2gpus_vcam_depth_254x254_3_train_views.gif" height="240px"><br>
+                            <h4><strong>Rendering the Captured Environment Radiance Field for Depth at Novel View Points</strong></h4>
+                        </a>
+                    </li>
+                </ul>
+                <p class="text-justify">
+                    From Multi-View images of an object with unknown geometry and diffuse texture, we convert the <b> object into a radiance-field camera</b> by modelling reflections as a 2D projection of a 5D environment radiance field onto the object surface. 
+                    The radiance field is queried on points closer to the object to enable <strong> Beyond Field-Of-View Novel View Synthesis</strong>. 
+                    Our framework can disentangle complex diffuse and specular well- notice how the <b>fireplace is occluded</b> in the multi-view images yet our framework can recover and interpolates between reflections to renders novel views and depth. 
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Why 5D Enviornment Radiance Fields? 
+                </h3>
+                <ul class="nav nav-pills nav-justified">
+                    <li>
+                        <a href="">
+                        <image src="pokemon_translation_along_circle.gif" height="240px"><br>
+                            <h4><strong>Occlusion Aware - Reveals hidden parts of the scene not visible from 2D Environment maps</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                        <image src="pokemon_translation_along_circle_depth.gif" height="240px"><br>
+                            <h4><strong>Environment Depth to closeby objects from Reflections Casted on Unknown Objects</strong></h4>
+                        </a>
+                    </li>
+                </ul>
+                <p class="text-justify">
+                    Modeling reflections on object surfaces as a 5D env. radiance field enables beyond field-of-view novel-view synthesis, including rendering of the environment from translated virtual camera views. Depth and environment radiance of translated and parallax views can further enable imaging behind occluders, for example revealing the tails behind the primary Pokemon occluders.
+                </p>
+            </div>
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Virtual Sensors and Pixels
+                </h3>
+                <ul class="nav nav-pills nav-justified">
+                    <image src="Overview.png" class="img-responsive" alt="overview"><br>
+
+                    <!-- <li>
+                        <a href="">
+                    <image src="teaser.png" class="img-responsive" alt="overview"><br>
+
+                        <image src="Overview.png" height="240px"><br>
+                            <h4><strong>Occlusion Aware - Reveals hidden parts of the scene not visible from 2D Environment maps</strong></h4>
+                        </a>
+                    </li> -->
+                    <!-- <li>
+                        <a href="">
+                        <image src="virtual-sesnor.png" height="240px"><br>
+                            <h4><strong>Environment Depth to closeby objects from Reflections Casted on Unknown Objects</strong></h4>
+                        </a>
+                    </li> -->
+                </ul>
+                <p class="text-justify">
+                    <!-- Modeling reflections on object surfaces as a 5D env. radiance field enables beyond field-of-view novel-view synthesis, including rendering of the environment from translated virtual camera views. Depth and environment radiance of translated and parallax views can further enable imaging behind occluders, for example revealing the tails behind the primary Pokemon occluders. -->
+                </p>
+            </div>
+        </div> -->
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
