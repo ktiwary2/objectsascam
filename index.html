@@ -136,20 +136,20 @@ Reflections on glossy objects contain valuable and hidden information about the 
                 <ul class="nav nav-pills nav-justified">
                     <li>
                         <a href="">
-                        <image src="rotating_sphere_.gif" height="240px"><br>
-                            <h4><strong>MultiView Images captured of a Sphere in Living Room</strong></h4>
+                        <image src="rotating_sphere_.gif" height="180px"><br>
+                            <h4><strong>Multi-view Images of a sphere-in-living-room</strong></h4>
                         </a>
                     </li>
                     <li>
                         <a href="">
-                        <image src="exp51_lv_forward_sphere_2gpus_vcam_rgb_254x254_3_train_views.gif" height="240px"><br>
-                            <h4><strong>Rendering the Captured Environment Radiance Field at Novel View Points</strong></h4>
+                        <image src="2d_env_rad.gif" height="180px"><br>
+                            <h4><strong>2D Environment Map from Reflections on Object</strong></h4>
                         </a>
                     </li>
                     <li>
                         <a href="">
-                        <image src="exp51_lv_forward_sphere_2gpus_vcam_depth_254x254_3_train_views.gif" height="240px"><br>
-                            <h4><strong>Rendering the Captured Environment Radiance Field for Depth at Novel View Points</strong></h4>
+                        <image src="living_room_virtual_rgb.gif" height="180px"><br>
+                            <h4><strong>Beyond FoV NVS using 5D Env. Radiance Fields</strong></h4>
                         </a>
                     </li>
                 </ul>
@@ -161,12 +161,45 @@ Reflections on glossy objects contain valuable and hidden information about the 
             </div>
         </div>
 
+        <!-- <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <!-- <h3> -->
+                <!-- </h3> -->
+                <!-- <ul class="nav nav-pills nav-justified">
+                    <li>
+                        <a href="">
+                        <image src="living_room_virtual_rgb.gif" height="240px"><br>
+                            <h4><strong>Occlusion Aware - Reveals hidden parts of the scene not visible from 2D Environment maps</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                        <image src="exp51_lv_forward_sphere_2gpus_vcam_rgb_254x254_3_train_views.gif" height="240px"><br>
+                            <h4><strong>Radiance from Env. Radiance Field rendered at novel views</strong></h4>
+                        </a>
+                    </li> -->
+                    <!-- <li>
+                        <a href="">
+                        <image src="exp51_lv_forward_sphere_2gpus_vcam_depth_254x254_3_train_views.gif" height="180px"><br>
+                            <h4><strong>Depth from Env. Radiance Field rendered at novel views</strong></h4>
+                        </a>
+                    </li>  -->
+                <!-- </ul> -->
+                <!-- <p class="text-justify"> -->
+                    <!-- From Multi-View images of an object with unknown geometry and diffuse texture, we convert the <b> object into a radiance-field camera</b> by modelling reflections as a 2D projection of a 5D environment radiance field onto the object surface.  -->
+                    <!-- The radiance field is queried on points closer to the object to enable <strong> Beyond Field-Of-View Novel View Synthesis</strong>.  -->
+                    <!-- Our framework can disentangle complex diffuse and specular radiance to uncover the hidden environment- notice how the <b>fireplace is occluded</b> in the multi-view images yet our framework can recover and interpolates between reflections to renders novel views and depth.  -->
+                <!-- </p> -->
+            <!-- </div> -->
+        <!-- </div> --> -->
+
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
                     Why 5D Enviornment Radiance Fields? 
                 </h3>
                 <ul class="nav nav-pills nav-justified">
+                   <p style="text-align:center;"> <image src="paralax_1.png" height="300px"><br>
                     <li>
                         <a href="">
                         <image src="pokemon_translation_along_circle.gif" height="240px"><br>
@@ -186,6 +219,45 @@ Reflections on glossy objects contain valuable and hidden information about the 
             </div>
         </div>
 
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Environment Radiance Field Enables Depth Estiamtion
+                </h3>
+                <ul class="nav nav-pills nav-justified">
+                    <!-- <li>
+                        <a href="">
+                        <image src="exp51_lv_forward_sphere_2gpus_vcam_rgb_254x254_3_train_views.gif" height="180px"><br>
+                            <h4><strong>Radiance from Env. Radiance Field rendered at novel views</strong></h4>
+                        </a>
+                    </li> -->
+                    <li>
+                        <a href="">
+                        <image src="lv_sphere_depth.gif" height="180px"><br>
+                            <h4><strong>Depth from Env. Radiance Field rendered at novel views</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                        <image src="exp52_pokemon_2gpus_twobdepth_254x254_3_train_views.gif" height="180px"><br>
+                            <h4><strong>Depth from Env. Radiance Field rendered at novel views</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                        <image src="exp51_lv_forward_sphere_2gpus_vcam_depth_254x254_3_train_views.gif" height="180px"><br>
+                            <h4><strong>Depth from Env. Radiance Field rendered at novel views</strong></h4>
+                        </a>
+                    </li>
+                </ul>
+                <p class="text-justify">
+                    From Multi-View images of an object with unknown geometry and diffuse texture, we convert the <b> object into a radiance-field camera</b> by modelling reflections as a 2D projection of a 5D environment radiance field onto the object surface. 
+                    The radiance field is queried on points closer to the object to enable <strong> Beyond Field-Of-View Novel View Synthesis</strong>. 
+                    Our framework can disentangle complex diffuse and specular radiance to uncover the hidden environment- notice how the <b>fireplace is occluded</b> in the multi-view images yet our framework can recover and interpolates between reflections to renders novel views and depth. 
+                </p>
+            </div>
+        </div>
         <!-- <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
@@ -194,7 +266,7 @@ Reflections on glossy objects contain valuable and hidden information about the 
                 <ul class="nav nav-pills nav-justified">
                     <image src="Overview.png" class="img-responsive" alt="overview"><br>
 
-                    <!-- <li>
+                    <li>
                         <a href="">
                     <image src="teaser.png" class="img-responsive" alt="overview"><br>
 
