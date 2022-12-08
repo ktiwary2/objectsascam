@@ -131,7 +131,7 @@ Reflections on glossy objects contain valuable and hidden information about the 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Objects-as-Radiance-Field-Cameras Enables Beyond Field-of-View Novel View Synthesis
+                    Modeling Unknown Object Surface as Virtual Sensors with Virtual Pixels 
                 </h3>
                 <ul class="nav nav-pills nav-justified">
                     <li>
@@ -155,8 +155,10 @@ Reflections on glossy objects contain valuable and hidden information about the 
                 </ul>
                 <p class="text-justify">
                     From Multi-View images of an object with unknown geometry and diffuse texture, we convert the <b> object into a radiance-field camera</b> by modelling reflections as a 2D projection of a 5D environment radiance field onto the object surface. 
-                    The radiance field is queried on points closer to the object to enable <strong> Beyond Field-Of-View Novel View Synthesis</strong>. 
-                    Our framework can disentangle complex diffuse and specular radiance to uncover the hidden environment- notice how the <b>fireplace is occluded</b> in the multi-view images yet our framework can recover and interpolates between reflections to renders novel views and depth. 
+                    The unknown object surface is modeled as a <b>virtual sensor</b> with <b>virtual pixels</b> that, unlike a tradition pixel, <b>have incoming radiance that is dependent on both viewpoint and local geometry </b>. 
+                    <b>Using the virtual pixel, we capture the Environment Radiance Field. </b>
+                    The radiance field is then queried on novel view points closer to the object to enable <strong>Beyond Field-Of-View Novel View Synthesis</strong>. 
+                    Our framework can disentangle complex diffuse and specular radiance to uncover the hidden environment- notice how the <b>fireplace is occluded</b> in the multi-view images yet our framework can recover and interpolate to render the complete fireplace. 
                 </p>
             </div>
         </div>
@@ -196,7 +198,7 @@ Reflections on glossy objects contain valuable and hidden information about the 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Why 5D Enviornment Radiance Fields? 
+                    Why 5D Environment Radiance Fields? 
                 </h3>
                 <ul class="nav nav-pills nav-justified">
                    <p style="text-align:center;"> <image src="paralax_1.png" height="300px"><br>
@@ -223,7 +225,7 @@ Reflections on glossy objects contain valuable and hidden information about the 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Environment Radiance Field Enables Depth Estiamtion
+                    Environment Radiance Field Enables Depth Estimation
                 </h3>
                 <ul class="nav nav-pills nav-justified">
                     <!-- <li>
@@ -235,19 +237,19 @@ Reflections on glossy objects contain valuable and hidden information about the 
                     <li>
                         <a href="">
                         <image src="lv_sphere_depth.gif" height="180px"><br>
-                            <h4><strong>Depth from Env. Radiance Field rendered at novel views</strong></h4>
+                            <h4><strong>Living Room Depth from Object's Surface when modeled as a Virtual Sensor</strong></h4>
                         </a>
                     </li>
                     <li>
                         <a href="">
                         <image src="exp52_pokemon_2gpus_twobdepth_254x254_3_train_views.gif" height="180px"><br>
-                            <h4><strong>Depth from Env. Radiance Field rendered at novel views</strong></h4>
+                            <h4><strong>Pokemon Depth from Object's Surface when modeled as a Virtual Sensor</strong></h4>
                         </a>
                     </li>
                     <li>
                         <a href="">
                         <image src="exp51_lv_forward_sphere_2gpus_vcam_depth_254x254_3_train_views.gif" height="180px"><br>
-                            <h4><strong>Depth from Env. Radiance Field rendered at novel views</strong></h4>
+                            <h4><strong>Rendering Depth at novel view points by querying the Env. Radiance Field</strong></h4>
                         </a>
                     </li>
                 </ul>
@@ -258,34 +260,36 @@ Reflections on glossy objects contain valuable and hidden information about the 
                 </p>
             </div>
         </div>
-        <!-- <div class="row">
+
+        <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Virtual Sensors and Pixels
+                    Virtual Pixels Cast Virutal Cones 
                 </h3>
                 <ul class="nav nav-pills nav-justified">
-                    <image src="Overview.png" class="img-responsive" alt="overview"><br>
-
                     <li>
                         <a href="">
-                    <image src="teaser.png" class="img-responsive" alt="overview"><br>
-
-                        <image src="Overview.png" height="240px"><br>
-                            <h4><strong>Occlusion Aware - Reveals hidden parts of the scene not visible from 2D Environment maps</strong></h4>
+                        <image src="virtual-sesnor.png" height="280px"><br>
+                            <h4><strong>Our Virtual Cone Formulation</strong></h4>
                         </a>
-                    </li> -->
-                    <!-- <li>
+                    </li>
+                    <li>
                         <a href="">
-                        <image src="virtual-sesnor.png" height="240px"><br>
-                            <h4><strong>Environment Depth to closeby objects from Reflections Casted on Unknown Objects</strong></h4>
+                        <image src="ivc_vs_cvc.png" height="280px"><br>
+                            <h4><strong>Naive Virtual Cones</strong></h4>
                         </a>
-                    </li> -->
+                    </li>
                 </ul>
                 <p class="text-justify">
-                    <!-- Modeling reflections on object surfaces as a 5D env. radiance field enables beyond field-of-view novel-view synthesis, including rendering of the environment from translated virtual camera views. Depth and environment radiance of translated and parallax views can further enable imaging behind occluders, for example revealing the tails behind the primary Pokemon occluders. -->
+                    We image the world through the object by modeling each pixel’s specular radiance as a projection of the 5D radiance field of the environment onto the object’s surface. 
+                    We capture the radiance field by treating the surface area on the object that the pixel views, dSt, as a virtual pixel with its center-of-projection at vo. 
+                    We cast virtual cones through the virtual sensor to capture the 5D radiance field of the environment. 
+                    Our formulation is more physically informed and samples the full incoming radiance by accounting for the real-pixel and object intersectional area (Right). 
+
                 </p>
             </div>
-        </div> -->
+        </div>
+
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
